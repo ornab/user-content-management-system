@@ -17,10 +17,10 @@ User Management System, Content Management System &amp; Admin panel with Laravel
 
 ### Include & Run###
  
- * #Include [Node js](https://www.nodejs.org/en/download/)
+ * Include [Node js](https://www.nodejs.org/en/download/)
  * Run 'npm install' In your project
  * Run 'npm run dev'
- * #Include [Highlight.js](https://highlightjs.org) for highlighting code
+ * Include [Highlight.js](https://highlightjs.org) for highlighting code
  * [CKEditor](http://ckeditor.com) the great editor
  * [Filemanager](https://github.com/simogeo/Filemanager) the easy file manager
  
