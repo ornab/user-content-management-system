@@ -49,7 +49,7 @@ body {
 }
 
 .navbar-top-links .dropdown-menu li:last-child {
-    margin-right: 0;
+/*    margin-right: 0;*/ 
 }
 
 .navbar-top-links .dropdown-menu li a {

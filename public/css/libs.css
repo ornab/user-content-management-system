@@ -8384,7 +8384,7 @@ body {
 }
 
 .navbar-top-links .dropdown-menu li:last-child {
-    margin-right: 0;
+/*    margin-right: 0;*/ 
 }
 
 .navbar-top-links .dropdown-menu li a {
@@ -8700,9 +8700,10 @@ table.dataTable thead .sorting:after {
 }
 
 .dropdown-user {
-    margin: 13px 0;
-    padding: 5px;
     height: 100%;
+    margin: 6px -3px;
+    padding-bottom: 100px;
+    padding-top: 15px;
 }
 
 .dropdown-user:hover {
