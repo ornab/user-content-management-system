@@ -47,7 +47,7 @@ class AdminUsersController extends Controller
     
 //        User::create($request->all());
 //        
-//        return redirect('/admin/users');
+      
         
         
         $input = $request->all();
@@ -69,6 +69,10 @@ class AdminUsersController extends Controller
         $input['password'] = bcrypt($request->password);
         
         User::create($input);
+        
+        
+        
+         return redirect('/admin/users');
         
     }
 
