@@ -30,8 +30,8 @@
         
        <tr>
         <td>{{$user->id}}</td>
-        <td><img height="50" src="{{$user->photo ? $user->photo->file : 'No User Photo '}}" alt="No Photo"></td>
-        <td>{{$user->name}}</td>
+        <td><img height="50" src="{{$user->photo ? $user->photo->file : 'http://www.placehold.it/400x400'}}" alt=""</td>
+        <td><a href="{{route('users.edit', $user->id)}}">{{$user->name}}</a></td>
         <td>{{$user->email}}</td>
         <td>{{$user->role->name}}</td>
         <td>
