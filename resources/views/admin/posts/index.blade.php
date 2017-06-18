@@ -5,6 +5,12 @@
 
 @section('content')
 
+ @if(Session::has('deleted_post'))
+    
+     <p class="alert alert-danger">{{ session('deleted_post') }}</p>
+  
+  @endif
+
 
 
      <h1>Posts</h1>

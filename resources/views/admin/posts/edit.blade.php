@@ -71,7 +71,7 @@
                    {!! Form::close()!!}
                    
                    
-                    {!! Form::open(['method'=>'DELETE', 'action'=>['AdminUsersController@destroy', $post->id]])!!}
+                    {!! Form::open(['method'=>'DELETE', 'action'=>['AdminPostsController@destroy', $post->id]])!!}
                    
                    
                     <div class="form-group pull-right">
