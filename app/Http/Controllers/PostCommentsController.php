@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Comment;
 
 class PostCommentsController extends Controller
 {
@@ -52,7 +53,12 @@ class PostCommentsController extends Controller
         
         Comment::create($request->all());
         
-        $request->session()->flash('Thanks for your comment');
+        $request->session()->flash('comment_message','Your comment is waiting for moderation');
+        
+        
+        return redirect()->back();
+    
+    
     }
 
     /**

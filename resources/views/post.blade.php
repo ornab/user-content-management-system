@@ -32,6 +32,19 @@
                 <p class="lead">{{$post->body}}</p>
 
                 <hr>
+                
+                
+                @if(Session::has('comment_message'))
+                
+                     
+                     <div class="alert aler-danger">
+                         
+                         {{session('comment_message')}}
+                         
+                     </div>
+                   
+                    
+                @endif
 
                 <!-- Blog Comments -->
 
