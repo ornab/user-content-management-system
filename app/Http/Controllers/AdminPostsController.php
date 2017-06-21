@@ -162,7 +162,7 @@ class AdminPostsController extends Controller
         
         $post = Post::findOrFail($id);
         
-        return $post;
+        return view('post', compact('post'));
         
     }
 
