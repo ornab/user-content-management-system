@@ -54,7 +54,7 @@ class PostCommentsController extends Controller
         ];
         
         
-        Comment::create($request->all());
+        Comment::create($data);
         
         $request->session()->flash('comment_message','Your comment is waiting for moderation');
         
@@ -95,7 +95,12 @@ class PostCommentsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Comment::findOrFail($id)->update($request->all());
+        
+        
+        return redirect('/admin/comments');
+        
+        
     }
 
     /**
@@ -106,6 +111,8 @@ class PostCommentsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Comment::findOrFail($id)->delete();
+        
+        return redirect()->back();
     }
 }
