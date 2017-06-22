@@ -103,16 +103,23 @@
                         </h4>
                        {{$comment->body}}
                        
+                            
+                            @if(count($comment->replies) > 0)
+                            
+                               
+                               @foreach($comment->replies as $reply)
+                          
+                       
                        <!-- Nested Comment -->
-                        <div class="media">
+                        <div class="nested-comment media">
                             <a class="pull-left" href="#">
-                                <img class="media-object" src="http://placehold.it/64x64" alt="">
+                                <img height="64" class="media-object" src="{{$reply->photo}}" alt="">
                             </a>
                             <div class="media-body">
-                                <h4 class="media-heading">Nested Start Bootstrap
-                                    <small>August 25, 2014 at 9:30 PM</small>
+                                <h4 class="media-heading">{{$reply->author}}
+                                    <small>{{$reply->created_at->diffForHumans()}}</small>
                                 </h4>
-                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                {{$reply->body}}
                             </div>
                             
                             {!! Form::open(['method'=>'POST', 'action'=>'CommentRepliesController@createReply']) !!}
@@ -129,18 +136,26 @@
                                        
                                    </div>
                                   
-                            
-                            {!! Form::close() !!}
+                              {!! Form::close()!!}
                             
                         </div>
                         <!-- End Nested Comment -->
+                            @endforeach
+                        
+                    @endif
+                             
+                         
                     </div>
                 </div>
                 
-                   @endforeach
                 
-                @endif
+                 
+                 
+            @endforeach
+                
+    @endif
 
+                  
                  
    
 
