@@ -49,6 +49,9 @@
                 <!-- Blog Comments -->
 
                 <!-- Comments Form -->
+                
+                @if(Auth::check())   
+                   
                 <div class="well">
                     <h4>Leave a Comment:</h4>
                     
@@ -75,18 +78,24 @@
                        {!!Form::close()!!}
                        
                        
-                       
-                       
-                </div>
+                     </div>
+                     
+                   @endif
 
                 <hr>
 
                 <!-- Posted Comments -->
+                
+                
+            @if(count($comments) > 0)
+                
+                
+                  @foreach($comments as $comment)
 
                 <!-- Comment -->
                 <div class="media">
                     <a class="pull-left" href="#">
-                        <img class="media-object" src="http://placehold.it/64x64" alt="">
+                        <img height="64" class="media-object" src="{{$comment->photo}}" alt="">
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">Start Bootstrap
@@ -95,6 +104,10 @@
                         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                     </div>
                 </div>
+                
+                   @endforeach
+                
+                @endif
 
                 <!-- Comment -->
                 <div class="media">
