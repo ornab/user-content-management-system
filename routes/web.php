@@ -52,10 +52,18 @@ Route::group(['middleware'=>'admin'], function(){
     
    // Route::get('/admin/media/upload', ['as'=>'media.upload', 'uses'=>'AdminMediaController@store']);
     
-    
-    
-    
-    
 });
+
+
+Route::group(['middleware'=>'auth'], function(){
+
+
+    Route::post('comment/reply', 'CommentRepliesController@createReply');
+
+});
+
+
+
+
 
 
