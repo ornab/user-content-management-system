@@ -74,7 +74,7 @@ class CommentRepliesController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**

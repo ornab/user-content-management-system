@@ -55,7 +55,7 @@
                       </div>
                        
                   
-               
+                     {!!Form::close()!!}
                   
                   
                   @else
@@ -79,19 +79,14 @@
             @endif
             
             
-            
-            
-            
-        </td>
+     </td>
         
         <td>
             
             {!! Form::open(['method'=>'DELETE', 'action'=>['PostCommentsController@destroy', $comment->id]]) !!}
                   
        
-                  
-                       
-                      <div class="form-group">
+                  <div class="form-group">
                           
                           {!! Form::submit('Delete', ['class'=>'btn btn-danger']) !!}
                           
@@ -101,6 +96,7 @@
             
             
         </td>
+     </tr>
         
        @endforeach
         

@@ -20,6 +20,7 @@
         <th>Email</th>
         <th>Body</th>
         <th>Post</th>
+        <th>Replies</th>
         <th>Created</th>
         <th>Updated</th>
         <th>Moderate</th>
@@ -36,6 +37,7 @@
         <td>{{$comment->email}}</td>
         <td>{{str_limit($comment->body, 40)}}</td>
         <td><a href="{{route('home.post', $comment->post->id)}}">View Post</a></td>
+        <td><a href="{{route('replies.show', $comment->id)}}">View Replies</a></td>
         <td>{{$comment->created_at->diffForHumans()}}</td>
         <td>{{$comment->updated_at->diffForHumans()}}</td>
         
