@@ -103,7 +103,7 @@ class PostCommentsController extends Controller
         Comment::findOrFail($id)->update($request->all());
         
         
-        return redirect('/admin/comments');
+        return redirect()->back();
         
         
     }

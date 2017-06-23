@@ -104,6 +104,8 @@
             
         </td>
         
+        </tr>
+        
        @endforeach
         
        
