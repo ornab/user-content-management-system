@@ -113,7 +113,8 @@
                        <!-- Nested Comment -->
                         
                        @if($reply->is_active == 1)
-                        <div id="nested-comment" class="media">
+                         
+                           <div id="nested-comment" class="media">
                             <a class="pull-left" href="#">
                                 <img height="64" class="media-object" src="{{$reply->photo}}" alt="">
                             </a>
@@ -129,6 +130,8 @@
                             
                      </div>
                         <!-- End Nested Comment -->
+                           
+                           
                             
                             @endif
                             
